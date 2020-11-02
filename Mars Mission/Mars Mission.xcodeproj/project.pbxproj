@@ -15,6 +15,8 @@
 		F2A18DBF25501CE8006E4F91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A18DBD25501CE8006E4F91 /* LaunchScreen.storyboard */; };
 		F2A18DCA25501CE8006E4F91 /* Mars_MissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A18DC925501CE8006E4F91 /* Mars_MissionTests.swift */; };
 		F2A18DD525501CE8006E4F91 /* Mars_MissionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A18DD425501CE8006E4F91 /* Mars_MissionUITests.swift */; };
+		F2A18DEB25502C8A006E4F91 /* toEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A18DEA25502C8A006E4F91 /* toEdit.swift */; };
+		F2A18DF325502CBC006E4F91 /* toEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A18DF225502CBC006E4F91 /* toEdit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		F2A18DD025501CE8006E4F91 /* Mars MissionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mars MissionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A18DD425501CE8006E4F91 /* Mars_MissionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mars_MissionUITests.swift; sourceTree = "<group>"; };
 		F2A18DD625501CE8006E4F91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2A18DEA25502C8A006E4F91 /* toEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toEdit.swift; sourceTree = "<group>"; };
+		F2A18DF225502CBC006E4F91 /* toEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toEdit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +103,11 @@
 		F2A18DB125501CE5006E4F91 /* Mars Mission */ = {
 			isa = PBXGroup;
 			children = (
-				F2A18DB225501CE5006E4F91 /* AppDelegate.swift */,
-				F2A18DB425501CE5006E4F91 /* SceneDelegate.swift */,
-				F2A18DB625501CE5006E4F91 /* ViewController.swift */,
-				F2A18DB825501CE5006E4F91 /* Main.storyboard */,
-				F2A18DBB25501CE8006E4F91 /* Assets.xcassets */,
-				F2A18DBD25501CE8006E4F91 /* LaunchScreen.storyboard */,
+				F2A18DE925502C25006E4F91 /* Controller */,
+				F2A18DE825502C10006E4F91 /* ViewModel */,
+				F2A18DE725502BEE006E4F91 /* Model */,
+				F2A18DE625502BCD006E4F91 /* Views */,
+				F2A18DE525502BAA006E4F91 /* Resources */,
 				F2A18DC025501CE8006E4F91 /* Info.plist */,
 			);
 			path = "Mars Mission";
@@ -126,6 +129,49 @@
 				F2A18DD625501CE8006E4F91 /* Info.plist */,
 			);
 			path = "Mars MissionUITests";
+			sourceTree = "<group>";
+		};
+		F2A18DE525502BAA006E4F91 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2A18DB425501CE5006E4F91 /* SceneDelegate.swift */,
+				F2A18DB225501CE5006E4F91 /* AppDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F2A18DE625502BCD006E4F91 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F2A18DBD25501CE8006E4F91 /* LaunchScreen.storyboard */,
+				F2A18DBB25501CE8006E4F91 /* Assets.xcassets */,
+				F2A18DB825501CE5006E4F91 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F2A18DE725502BEE006E4F91 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2A18DF225502CBC006E4F91 /* toEdit.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2A18DE825502C10006E4F91 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F2A18DEA25502C8A006E4F91 /* toEdit.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F2A18DE925502C25006E4F91 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2A18DB625501CE5006E4F91 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +304,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2A18DF325502CBC006E4F91 /* toEdit.swift in Sources */,
+				F2A18DEB25502C8A006E4F91 /* toEdit.swift in Sources */,
 				F2A18DB725501CE5006E4F91 /* ViewController.swift in Sources */,
 				F2A18DB325501CE5006E4F91 /* AppDelegate.swift in Sources */,
 				F2A18DB525501CE5006E4F91 /* SceneDelegate.swift in Sources */,
