@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F284F83C255191CC00AF07A6 /* toEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F83B255191CC00AF07A6 /* toEdit.swift */; };
+		F284F83C255191CC00AF07A6 /* toEdit3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F83B255191CC00AF07A6 /* toEdit3.swift */; };
 		F284F84425519C0400AF07A6 /* toEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F84325519C0400AF07A6 /* toEdit.swift */; };
-		F284F84C25519C1700AF07A6 /* toEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F84B25519C1700AF07A6 /* toEdit.swift */; };
+		F284F84C25519C1700AF07A6 /* toEdit1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F84B25519C1700AF07A6 /* toEdit1.swift */; };
 		F284F85725519D4000AF07A6 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F85625519D4000AF07A6 /* APIKeys.swift */; };
 		F284F85D25519FBA00AF07A6 /* baseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F85C25519FBA00AF07A6 /* baseURL.swift */; };
 		F284F8632551A08200AF07A6 /* endPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F8622551A08200AF07A6 /* endPoints.swift */; };
@@ -23,7 +23,7 @@
 		F2A18DBF25501CE8006E4F91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A18DBD25501CE8006E4F91 /* LaunchScreen.storyboard */; };
 		F2A18DCA25501CE8006E4F91 /* Mars_MissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A18DC925501CE8006E4F91 /* Mars_MissionTests.swift */; };
 		F2A18DD525501CE8006E4F91 /* Mars_MissionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A18DD425501CE8006E4F91 /* Mars_MissionUITests.swift */; };
-		F2A18DF325502CBC006E4F91 /* toEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A18DF225502CBC006E4F91 /* toEdit.swift */; };
+		F2A18DF325502CBC006E4F91 /* toEdit2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A18DF225502CBC006E4F91 /* toEdit2.swift */; };
 		F2A18DF82551091B006E4F91 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A18DF72551091B006E4F91 /* View.xib */; };
 /* End PBXBuildFile section */
 
@@ -45,9 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F284F83B255191CC00AF07A6 /* toEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toEdit.swift; sourceTree = "<group>"; };
+		F284F83B255191CC00AF07A6 /* toEdit3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toEdit3.swift; sourceTree = "<group>"; };
 		F284F84325519C0400AF07A6 /* toEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toEdit.swift; sourceTree = "<group>"; };
-		F284F84B25519C1700AF07A6 /* toEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toEdit.swift; sourceTree = "<group>"; };
+		F284F84B25519C1700AF07A6 /* toEdit1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toEdit1.swift; sourceTree = "<group>"; };
 		F284F85625519D4000AF07A6 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		F284F85C25519FBA00AF07A6 /* baseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseURL.swift; sourceTree = "<group>"; };
 		F284F8622551A08200AF07A6 /* endPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = endPoints.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		F2A18DD025501CE8006E4F91 /* Mars MissionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mars MissionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A18DD425501CE8006E4F91 /* Mars_MissionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mars_MissionUITests.swift; sourceTree = "<group>"; };
 		F2A18DD625501CE8006E4F91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2A18DF225502CBC006E4F91 /* toEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toEdit.swift; sourceTree = "<group>"; };
+		F2A18DF225502CBC006E4F91 /* toEdit2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toEdit2.swift; sourceTree = "<group>"; };
 		F2A18DF72551091B006E4F91 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +99,7 @@
 		F284F8392551918C00AF07A6 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				F284F83B255191CC00AF07A6 /* toEdit.swift */,
+				F284F83B255191CC00AF07A6 /* toEdit3.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -107,7 +107,7 @@
 		F284F83A2551919900AF07A6 /* services */ = {
 			isa = PBXGroup;
 			children = (
-				F2A18DF225502CBC006E4F91 /* toEdit.swift */,
+				F2A18DF225502CBC006E4F91 /* toEdit2.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -124,7 +124,7 @@
 		F284F84125519BC400AF07A6 /* weather */ = {
 			isa = PBXGroup;
 			children = (
-				F284F84B25519C1700AF07A6 /* toEdit.swift */,
+				F284F84B25519C1700AF07A6 /* toEdit1.swift */,
 			);
 			path = weather;
 			sourceTree = "<group>";
@@ -220,6 +220,7 @@
 		F2A18DB125501CE5006E4F91 /* Mars Mission */ = {
 			isa = PBXGroup;
 			children = (
+				F2A18DC025501CE8006E4F91 /* Info.plist */,
 				F284F85325519C9A00AF07A6 /* APILayer */,
 				F2A18DE925502C25006E4F91 /* PresentationLayer */,
 				F2A18DE725502BEE006E4F91 /* BusinessLogicLayer */,
@@ -259,7 +260,6 @@
 		F2A18DE625502BCD006E4F91 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				F2A18DC025501CE8006E4F91 /* Info.plist */,
 				F2A18DBD25501CE8006E4F91 /* LaunchScreen.storyboard */,
 				F2A18DBB25501CE8006E4F91 /* Assets.xcassets */,
 				F2A18DB825501CE5006E4F91 /* Main.storyboard */,
@@ -418,13 +418,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F284F8632551A08200AF07A6 /* endPoints.swift in Sources */,
-				F284F84C25519C1700AF07A6 /* toEdit.swift in Sources */,
-				F2A18DF325502CBC006E4F91 /* toEdit.swift in Sources */,
+				F284F84C25519C1700AF07A6 /* toEdit1.swift in Sources */,
+				F2A18DF325502CBC006E4F91 /* toEdit2.swift in Sources */,
 				F284F84425519C0400AF07A6 /* toEdit.swift in Sources */,
 				F284F85D25519FBA00AF07A6 /* baseURL.swift in Sources */,
 				F2A18DB725501CE5006E4F91 /* ViewController.swift in Sources */,
 				F2A18DB325501CE5006E4F91 /* AppDelegate.swift in Sources */,
-				F284F83C255191CC00AF07A6 /* toEdit.swift in Sources */,
+				F284F83C255191CC00AF07A6 /* toEdit3.swift in Sources */,
 				F284F85725519D4000AF07A6 /* APIKeys.swift in Sources */,
 				F2A18DB525501CE5006E4F91 /* SceneDelegate.swift in Sources */,
 				F284F8692551A0C900AF07A6 /* networkError.swift in Sources */,
