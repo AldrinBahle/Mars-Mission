@@ -7,9 +7,15 @@
 
 import Foundation
 
-struct API {
-    static let nasaAPI = "NYVu6FVU9WwiBBy9zp4iaWveE1SmWlnDFgEy32cH"
-    static let key = nasaAPI
-    static let baseURL = URL(string: "https://api.nasa.gov")!
-    static let authenticatedURL = baseURL.appendingPathComponent(key)
+private var apiKey: String {
+    get {
+        guard let filePath = Bundle.main.path(forResource: "Config", ofType: "plist") else {
+            fatalError("Could Not find the file 'Config.plist'.")
+        }
+        let plist = NSDictionary(contentsOfFile: filePath)
+        guard let value = plist?.object(forKey: "API_KEY") as? String else {
+            fatalError("Could Not find key 'API_KEY' in 'Config.plist'.")
+        }
+        return value
+    }
 }
