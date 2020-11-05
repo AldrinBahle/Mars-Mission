@@ -8,28 +8,28 @@
 import Foundation
 
 struct WeatherDataModel: Codable {
-    let latitude: Double
-    let longitude: Double
-    let currently: CurrentWeather
-    let daily: WeeklyWeatherData
+    let latitude: Double?
+    let longitude: Double?
+    let currently: CurrentWeather?
+    let daily: WeeklyWeatherData?
         
     struct CurrentWeather: Codable {
-        let time: Date
-        let summary: String
-        let icon: String
-        let temperature: Double
-        let humidity: Double
+        let time: Date?
+        let summary: String?
+        let icon: String?
+        let temperature: Double?
+        let humidity: Double?
     }
         
     struct WeeklyWeatherData: Codable {
-        let data: [ForecastData]
+        let data: [ForecastData]?
     }
     
     struct ForecastData: Codable {
-        let time: Date
-        let temperatureLow: Double
-        let temperatureHigh: Double
-        let icon: String
-        let humidity: Double
+        let time: Date?
+        let temperatureLow: Double?
+        let temperatureHigh: Double?
+        let icon: String?
+        let humidity: Double?
     }
 }

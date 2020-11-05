@@ -9,11 +9,11 @@ import Foundation
 
 enum WeatherDetails: Int {
     case sunrise
-        case sunset
-        case pressure
-        case humidity
-        case tempMin
-        case tempMax
-        case wind
-        case visibility
+    case sunset
+    case pressure
+    case humidity
+    case tempMin
+    case tempMax
+    case wind
+    case visibility
 }
