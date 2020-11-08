@@ -7,14 +7,14 @@
 
 import Foundation
 
-private var apiKey: String {
+private var APIBaseURL: String {
     get {
         guard let filePath = Bundle.main.path(forResource: "Config", ofType: "plist") else {
             fatalError("Could Not find the file 'Config.plist'.")
         }
         let plist = NSDictionary(contentsOfFile: filePath)
-        guard let value = plist?.object(forKey: "API_KEY") as? String else {
-            fatalError("Could Not find key 'API_KEY' in 'Config.plist'.")
+        guard let value = plist?.object(forKey: "APIBaseURL") as? String else {
+            fatalError("Could Not find key 'APIBaseURL' in 'Config.plist'.")
         }
         return value
     }

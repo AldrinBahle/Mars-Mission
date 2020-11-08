@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F218D80B2555D6FB00410E73 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F218D80A2555D6FB00410E73 /* WeatherView.swift */; };
+		F218D8162557295200410E73 /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F218D8152557295200410E73 /* WeatherViewController.xib */; };
+		F2690EB825558D48004AFECD /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2690EB625558D48004AFECD /* WeatherViewController.swift */; };
 		F284F8AE25521A8800AF07A6 /* DetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F8AD25521A8800AF07A6 /* DetailsModel.swift */; };
 		F284F8B325521AA000AF07A6 /* WeatherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F8B225521AA000AF07A6 /* WeatherDetails.swift */; };
 		F284F8BF255229FC00AF07A6 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F8BE255229FC00AF07A6 /* WeatherModel.swift */; };
 		F284F8C5255230C900AF07A6 /* APILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F8C4255230C900AF07A6 /* APILayer.swift */; };
-		F284F8CD255234BD00AF07A6 /* toEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F8CC255234BD00AF07A6 /* toEdit.swift */; };
+		F284F8CD255234BD00AF07A6 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F8CC255234BD00AF07A6 /* WeatherViewModel.swift */; };
 		F284F8D22552BFE900AF07A6 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = F284F8D12552BFE900AF07A6 /* Config.plist */; };
 		F284F8D72552CA8900AF07A6 /* ViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F8D62552CA8900AF07A6 /* ViewContoller.swift */; };
 		F284F8E32552E50200AF07A6 /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F8E22552E50200AF07A6 /* ServiceLayer.swift */; };
@@ -44,11 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F218D80A2555D6FB00410E73 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		F218D8152557295200410E73 /* WeatherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherViewController.xib; sourceTree = "<group>"; };
+		F2690EB625558D48004AFECD /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		F284F8AD25521A8800AF07A6 /* DetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModel.swift; sourceTree = "<group>"; };
 		F284F8B225521AA000AF07A6 /* WeatherDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetails.swift; sourceTree = "<group>"; };
 		F284F8BE255229FC00AF07A6 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		F284F8C4255230C900AF07A6 /* APILayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILayer.swift; sourceTree = "<group>"; };
-		F284F8CC255234BD00AF07A6 /* toEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toEdit.swift; sourceTree = "<group>"; };
+		F284F8CC255234BD00AF07A6 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		F284F8D12552BFE900AF07A6 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		F284F8D62552CA8900AF07A6 /* ViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContoller.swift; sourceTree = "<group>"; };
 		F284F8E22552E50200AF07A6 /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
@@ -107,6 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				F2A18DB825501CE5006E4F91 /* Main.storyboard */,
+				F2690EB625558D48004AFECD /* WeatherViewController.swift */,
+				F218D8152557295200410E73 /* WeatherViewController.xib */,
+				F218D80A2555D6FB00410E73 /* WeatherView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,7 +123,7 @@
 		F284F8AC25521A5B00AF07A6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F284F8CC255234BD00AF07A6 /* toEdit.swift */,
+				F284F8CC255234BD00AF07A6 /* WeatherViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -273,6 +282,9 @@
 		F2A18DA725501CE5006E4F91 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					ui,
+				);
 				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
@@ -315,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2A18DBC25501CE8006E4F91 /* Assets.xcassets in Resources */,
+				F218D8162557295200410E73 /* WeatherViewController.xib in Resources */,
 				F2A18DBA25501CE5006E4F91 /* Main.storyboard in Resources */,
 				F284F8D22552BFE900AF07A6 /* Config.plist in Resources */,
 			);
@@ -343,8 +356,10 @@
 			files = (
 				F284F8E82552E52200AF07A6 /* ServiceLayerImplementation.swift in Sources */,
 				F284F8C5255230C900AF07A6 /* APILayer.swift in Sources */,
-				F284F8CD255234BD00AF07A6 /* toEdit.swift in Sources */,
+				F284F8CD255234BD00AF07A6 /* WeatherViewModel.swift in Sources */,
 				F2A18DB325501CE5006E4F91 /* AppDelegate.swift in Sources */,
+				F2690EB825558D48004AFECD /* WeatherViewController.swift in Sources */,
+				F218D80B2555D6FB00410E73 /* WeatherView.swift in Sources */,
 				F284F8D72552CA8900AF07A6 /* ViewContoller.swift in Sources */,
 				F284F8B325521AA000AF07A6 /* WeatherDetails.swift in Sources */,
 				F284F8F32552F84A00AF07A6 /* WeatherRepositoryImplementation.swift in Sources */,
