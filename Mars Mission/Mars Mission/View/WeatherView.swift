@@ -13,5 +13,5 @@ protocol WeatherView {
     func hideWeatherView()
     func showLoadingIndicator()
     func hideLoadingIndicator()
-    func populateWeather(_ date: String, _ temp: Double, _ humidity: Double, _ windSpeed: Double, _ safe: Bool)
+    func populateWeather(_ date: String, _ temp: Double, _ humidity: Int, _ windSpeed: Int, _ safe: Bool)
 }

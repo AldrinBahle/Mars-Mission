@@ -16,8 +16,8 @@ struct WeatherDataModel: Codable {
 struct WeatherAtrr: Codable {
     var date: String?
     var temp: Double?
-    var hunidity: Double?
-    var windspeed: Double?
+    var humidity: Int?
+    var windSpeed: Int?
     var safe: Bool?
 }
 

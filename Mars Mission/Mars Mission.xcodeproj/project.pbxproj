@@ -13,9 +13,7 @@
 		F284F8AE25521A8800AF07A6 /* DetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F8AD25521A8800AF07A6 /* DetailsModel.swift */; };
 		F284F8B325521AA000AF07A6 /* WeatherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F8B225521AA000AF07A6 /* WeatherDetails.swift */; };
 		F284F8BF255229FC00AF07A6 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F8BE255229FC00AF07A6 /* WeatherModel.swift */; };
-		F284F8C5255230C900AF07A6 /* APILayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F8C4255230C900AF07A6 /* APILayer.swift */; };
 		F284F8CD255234BD00AF07A6 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F8CC255234BD00AF07A6 /* WeatherViewModel.swift */; };
-		F284F8D22552BFE900AF07A6 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = F284F8D12552BFE900AF07A6 /* Config.plist */; };
 		F284F8D72552CA8900AF07A6 /* ViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F8D62552CA8900AF07A6 /* ViewContoller.swift */; };
 		F284F8E32552E50200AF07A6 /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F8E22552E50200AF07A6 /* ServiceLayer.swift */; };
 		F284F8E82552E52200AF07A6 /* ServiceLayerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284F8E72552E52200AF07A6 /* ServiceLayerImplementation.swift */; };
@@ -53,9 +51,7 @@
 		F284F8AD25521A8800AF07A6 /* DetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModel.swift; sourceTree = "<group>"; };
 		F284F8B225521AA000AF07A6 /* WeatherDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetails.swift; sourceTree = "<group>"; };
 		F284F8BE255229FC00AF07A6 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
-		F284F8C4255230C900AF07A6 /* APILayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILayer.swift; sourceTree = "<group>"; };
 		F284F8CC255234BD00AF07A6 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
-		F284F8D12552BFE900AF07A6 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		F284F8D62552CA8900AF07A6 /* ViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContoller.swift; sourceTree = "<group>"; };
 		F284F8E22552E50200AF07A6 /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
 		F284F8E72552E52200AF07A6 /* ServiceLayerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayerImplementation.swift; sourceTree = "<group>"; };
@@ -137,15 +133,6 @@
 			path = DetailsModel;
 			sourceTree = "<group>";
 		};
-		F284F8C3255230AD00AF07A6 /* APILayer */ = {
-			isa = PBXGroup;
-			children = (
-				F284F8C4255230C900AF07A6 /* APILayer.swift */,
-				F284F8D12552BFE900AF07A6 /* Config.plist */,
-			);
-			path = APILayer;
-			sourceTree = "<group>";
-		};
 		F284F8E12552E12B00AF07A6 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,7 +176,6 @@
 			children = (
 				F284F8EC2552F7FA00AF07A6 /* Repository */,
 				F284F8E12552E12B00AF07A6 /* Service */,
-				F284F8C3255230AD00AF07A6 /* APILayer */,
 				F284F8AC25521A5B00AF07A6 /* ViewModel */,
 				F284F8AB25521A5200AF07A6 /* View */,
 				F284F8AA25521A4400AF07A6 /* Model */,
@@ -329,7 +315,6 @@
 				F2A18DBC25501CE8006E4F91 /* Assets.xcassets in Resources */,
 				F218D8162557295200410E73 /* WeatherViewController.xib in Resources */,
 				F2A18DBA25501CE5006E4F91 /* Main.storyboard in Resources */,
-				F284F8D22552BFE900AF07A6 /* Config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +340,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F284F8E82552E52200AF07A6 /* ServiceLayerImplementation.swift in Sources */,
-				F284F8C5255230C900AF07A6 /* APILayer.swift in Sources */,
 				F284F8CD255234BD00AF07A6 /* WeatherViewModel.swift in Sources */,
 				F2A18DB325501CE5006E4F91 /* AppDelegate.swift in Sources */,
 				F2690EB825558D48004AFECD /* WeatherViewController.swift in Sources */,

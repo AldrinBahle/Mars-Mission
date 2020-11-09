@@ -12,6 +12,7 @@ class WeatherViewController: UIViewController, WeatherView {
     
     @IBOutlet weak var weatherView: UIStackView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
@@ -24,7 +25,7 @@ class WeatherViewController: UIViewController, WeatherView {
         super.viewDidLoad()
         viewModel.configureUI()
         viewModel.fetchData()
-        navigationItem.title = "Mars Mission"
+        //navigationItem.title = "Mars Mission"
     }
 
     func configureTitle(_ title: String) {
@@ -49,12 +50,17 @@ class WeatherViewController: UIViewController, WeatherView {
         //self.activityIndicator.isHidden = true
     }
     
-    func populateWeather(_ date: String, _ temp: Double, _ humidity: Double, _ windSpeed: Double, _ safe: Bool) {
+    func populateWeather(_ date: String, _ temp: Double, _ humidity: Int, _ windSpeed: Int, _ safe: Bool) {
         self.titleLabel.text = title
-       // self.tempLabel.text = "\(temp)"
-        //self.humidityLabel.text = "\(humidity)"
-        //self.windSpeedLabel.text = "\(windSpeed)"
-        //self.safeLabel.text = "\(safe)"
+        self.dateLabel.text = "Date: \(date)"
+        self.titleLabel.text = "Temperatue: \(temp)"
+        self.humidityLabel.text = "Humidity: \(humidity)"
+        self.windSpeedLabel.text = "Wind Speed: \(windSpeed) KM/h"
+        if safe == true {
+            self.safeLabel.text = "Status: safe"
+        } else {
+            self.safeLabel.text = "Status: unsafe"
+        }
     }
 }
     

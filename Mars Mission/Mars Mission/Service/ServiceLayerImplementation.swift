@@ -25,7 +25,6 @@ class ServiceLayerImplementation: ServiceLayer {
                 if let data = data {
                     let post = try JSONDecoder().decode(WeatherDataModel.self, from: data)
                     completion(.success(post))
-                    print(post) //just checking on the console if I'm able to get the API date.
                 }
                 else {
                     completion(.failure(self.serviceError))
