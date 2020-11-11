@@ -25,6 +25,7 @@ class ServiceLayerImplementation: ServiceLayer {
                 if let data = data {
                     let post = try JSONDecoder().decode(WeatherDataModel.self, from: data)
                     completion(.success(post))
+                    print(post)
                 }
                 else {
                     completion(.failure(self.serviceError))
