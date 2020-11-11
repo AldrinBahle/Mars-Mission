@@ -43,14 +43,13 @@ class WeatherViewModel {
     private func handleThatFetchPostSucceeds(_ post: WeatherDataModel) {
         DispatchQueue.main.async {
             self.post = post
-            for i in 0..<post.forecasts.count {
-                self.view.populateWeather(post.forecasts[i].date ?? "",
-                                      (post.forecasts[i].temp ?? 0.0),
-                                      (post.forecasts[i].humidity ?? 0),
-                                      (post.forecasts[i].windSpeed ?? 0),
-                                      post.forecasts[i].safe ?? false)
-                let day : Dictionary = [i+1: post.forecasts[i].date]
-                print(day)
+            self.view.reloadTableView()
+            for index in 0..<post.forecasts.count {
+                self.view.populateWeather(post.forecasts[index].date.getFormattedDate(format: "yyyy-MM-dd HH:mm:ss"),
+                                      (post.forecasts[index].temp ?? 0.0),
+                                      (post.forecasts[index].humidity ?? 0),
+                                      (post.forecasts[index].windSpeed ?? 0),
+                                      post.forecasts[index].safe ?? false)
             }
             self.view.hideLoadingIndicator()
             self.view.showWeatherView()

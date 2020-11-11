@@ -25,6 +25,8 @@
 		F2A18DBC25501CE8006E4F91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A18DBB25501CE8006E4F91 /* Assets.xcassets */; };
 		F2A18DCA25501CE8006E4F91 /* Mars_MissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A18DC925501CE8006E4F91 /* Mars_MissionTests.swift */; };
 		F2A18DD525501CE8006E4F91 /* Mars_MissionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A18DD425501CE8006E4F91 /* Mars_MissionUITests.swift */; };
+		F2D8C075255BE65200B02B27 /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8C073255BE65200B02B27 /* WeatherDetailsViewController.swift */; };
+		F2D8C076255BE65200B02B27 /* WeatherDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D8C074255BE65200B02B27 /* WeatherDetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		F2A18DD025501CE8006E4F91 /* Mars MissionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mars MissionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A18DD425501CE8006E4F91 /* Mars_MissionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mars_MissionUITests.swift; sourceTree = "<group>"; };
 		F2A18DD625501CE8006E4F91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2D8C073255BE65200B02B27 /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewController.swift; sourceTree = "<group>"; };
+		F2D8C074255BE65200B02B27 /* WeatherDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherDetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				F2690EB625558D48004AFECD /* WeatherViewController.swift */,
 				F218D8152557295200410E73 /* WeatherViewController.xib */,
 				F218D80A2555D6FB00410E73 /* WeatherView.swift */,
+				F2D8C073255BE65200B02B27 /* WeatherDetailsViewController.swift */,
+				F2D8C074255BE65200B02B27 /* WeatherDetailsViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2D8C076255BE65200B02B27 /* WeatherDetailsViewController.xib in Resources */,
 				F2A18DBC25501CE8006E4F91 /* Assets.xcassets in Resources */,
 				F218D8162557295200410E73 /* WeatherViewController.xib in Resources */,
 				F2A18DBA25501CE5006E4F91 /* Main.storyboard in Resources */,
@@ -351,6 +358,7 @@
 				F2A18DB525501CE5006E4F91 /* SceneDelegate.swift in Sources */,
 				F284F8E32552E50200AF07A6 /* ServiceLayer.swift in Sources */,
 				F284F8EE2552F83100AF07A6 /* WeatherRepository.swift in Sources */,
+				F2D8C075255BE65200B02B27 /* WeatherDetailsViewController.swift in Sources */,
 				F284F8BF255229FC00AF07A6 /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
