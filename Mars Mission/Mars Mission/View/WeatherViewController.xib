@@ -24,8 +24,9 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titleLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="057-sL-Fny">
-                    <rect key="frame" x="15" y="54" width="384" height="77"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="titleLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="057-sL-Fny">
+                    <rect key="frame" x="280" y="95" width="119" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -68,12 +69,6 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemTealColor"/>
-            <constraints>
-                <constraint firstItem="057-sL-Fny" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="3wc-lo-fIi"/>
-                <constraint firstItem="057-sL-Fny" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="4s5-ex-CNc"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="057-sL-Fny" secondAttribute="trailing" constant="15" id="YyJ-hg-KOM"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="057-sL-Fny" secondAttribute="bottom" constant="731" id="uY2-g7-p0K"/>
-            </constraints>
             <point key="canvasLocation" x="-465.21739130434787" y="44.866071428571423"/>
         </view>
     </objects>

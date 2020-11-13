@@ -44,21 +44,14 @@ class WeatherViewModel {
         DispatchQueue.main.async {
             self.post = post
             self.view.reloadTableView()
-            for index in 0..<post.forecasts.count {
-                self.view.populateWeather(post.forecasts[index].date.getFormattedDate(format: "yyyy-MM-dd HH:mm:ss"),
-                                      (post.forecasts[index].temp ?? 0.0),
-                                      (post.forecasts[index].humidity ?? 0),
-                                      (post.forecasts[index].windSpeed ?? 0),
-                                      post.forecasts[index].safe ?? false)
-            }
             self.view.hideLoadingIndicator()
             self.view.showWeatherView()
         }
     }
-    
+        
     private func handleThatFetchPostFailure(_ error: Error) {
-        DispatchQueue.main.async {
-            print(error)
+            DispatchQueue.main.async {
+                print(error)
+            }
         }
     }
-}

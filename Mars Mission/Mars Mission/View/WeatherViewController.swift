@@ -27,7 +27,8 @@ class WeatherViewController: UIViewController, WeatherView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = .systemBlue
+        self.view.backgroundColor = UIColor.black
+        tableView.backgroundColor = UIColor.systemBlue
         viewModel.configureUI()
         viewModel.fetchData()
         view.addSubview(tableView)
@@ -86,7 +87,7 @@ extension WeatherViewController: UITableViewDelegate {
         let weatherDetails = viewModel.post?.forecasts[indexPath.row]
         
         let vc = WeatherDetailsViewController(nibName: "WeatherDetailsViewController", bundle: nil)
-        vc.title = weatherDetails?.date.getFormattedDate(format: "yyyy-MM-dd")
+        vc.title = weatherDetails?.date
         navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -98,18 +99,21 @@ extension WeatherViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        guard let dates = viewModel.post?.forecasts[indexPath.row] else {
+        cell.backgroundColor = .clear
+        cell.isOpaque = false
+        guard let forecast = viewModel.post?.forecasts[indexPath.row] else {
             return cell
         }
-        cell.textLabel?.text = (dates.date.getFormattedDate(format: "yyyy-MM-dd"))
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let str = dateFormatter.date(from: forecast.date ?? "")
+        dateFormatter.dateFormat = "MMM dd,yyyy"
+        let date = dateFormatter.string(from: str!)
+        let finalVal = date.components(separatedBy: "-")
+        cell.textLabel?.text = "\(finalVal.first ?? "" )"
         return cell
     }
 }
 
-extension Date {
-   func getFormattedDate(format: String) -> String {
-        let dateformat = DateFormatter()
-        dateformat.dateFormat = format
-        return dateformat.string(from: self)
-    }
-}
+
