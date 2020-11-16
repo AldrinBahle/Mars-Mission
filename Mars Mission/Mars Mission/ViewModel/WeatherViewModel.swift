@@ -27,7 +27,9 @@ class WeatherViewModel {
     }
     
     func fetchData() {
-        self.view.showLoadingIndicator()
+        DispatchQueue.main.async {
+            self.view.showLoadingIndicator()
+        }
         DispatchQueue.global(qos: .background).async {
             self.repository.fetchData { (result) in
                 switch result {
@@ -52,6 +54,8 @@ class WeatherViewModel {
     private func handleThatFetchPostFailure(_ error: Error) {
             DispatchQueue.main.async {
                 print(error)
+                self.view.hideLoadingIndicator()
+                //present an alert
             }
         }
     }

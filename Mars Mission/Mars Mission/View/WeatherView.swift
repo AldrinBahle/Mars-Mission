@@ -14,5 +14,4 @@ protocol WeatherView {
     func showLoadingIndicator()
     func hideLoadingIndicator()
     func reloadTableView()
-    func populateWeather(_ date: String, _ temp: Double, _ humidity: Int, _ windSpeed: Int, _ safe: Bool)
 }
