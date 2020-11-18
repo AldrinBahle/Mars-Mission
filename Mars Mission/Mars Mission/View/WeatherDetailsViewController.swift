@@ -15,7 +15,6 @@ class WeatherDetailsViewController: UIViewController {
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var windSpeedLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
-    @IBOutlet weak var loader: UIActivityIndicatorView!
     
     var date = String()
     var temp = Double()
@@ -26,20 +25,7 @@ class WeatherDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemTeal
-        view.bringSubviewToFront(loader)
-        showLoadingIndicator()
         forecatsDataView()
-        hideLoadingIndicator()
-    }
-    
-    func showLoadingIndicator() {
-        self.loader?.startAnimating()
-        self.loader.isHidden = false
-    }
-    
-    func hideLoadingIndicator() {
-        self.loader.isHidden = true
-        loader?.stopAnimating()
     }
     
     func forecatsDataView() {

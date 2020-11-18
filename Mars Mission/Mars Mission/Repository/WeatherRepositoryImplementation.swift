@@ -9,7 +9,11 @@ import Foundation
 
 class WeatherRepositoryImplementation: WeatherRepository {
     
-    private let service = ServiceLayerImplementation()
+    let service: ServiceLayer
+    
+    init(service: ServiceLayer) {
+        self.service = service
+    }
     
     func fetchData(completion: @escaping (Result<WeatherDataModel, Error>) -> Void) {
         service.fetchData { (result) in

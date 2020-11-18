@@ -14,4 +14,6 @@ protocol WeatherView {
     func showLoadingIndicator()
     func hideLoadingIndicator()
     func reloadTableView()
+    func showServerError()
+    func addRightNavigationBarInfoButton()
 }

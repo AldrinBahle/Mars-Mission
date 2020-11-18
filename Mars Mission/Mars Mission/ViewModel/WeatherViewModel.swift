@@ -10,18 +10,20 @@ import Foundation
 class WeatherViewModel {
     let title = "Mars Weather"
     
-    let repository = WeatherRepositoryImplementation()
+    let repository: WeatherRepository
     
     var view: WeatherView
     var post: WeatherDataModel?
     
     
-    init(view: WeatherView) {
+    init(view: WeatherView, repository: WeatherRepository) {
         self.view = view
+        self.repository = repository
     }
     
     func configureUI() {
         self.view.configureTitle(title)
+        self.view.addRightNavigationBarInfoButton()
         self.view.hideWeatherView()
         self.view.hideLoadingIndicator()
     }
@@ -56,6 +58,7 @@ class WeatherViewModel {
                 print(error)
                 self.view.hideLoadingIndicator()
                 //present an alert
+                self.view.showServerError()
             }
         }
     }
