@@ -8,14 +8,14 @@
 import XCTest
 @testable import Mars_Mission
 
-class WeatherRepositoryImplementation: XCTestCase {
+class WeatherRepositoryImplementationTests: XCTestCase {
     
     var mockService = MockService()
     
     var systemUnderTest: WeatherRepositoryImplementation!
     
     override func setUpWithError() throws {
-        systemUnderTest = WeatherRepositoryImplementation()
+        systemUnderTest = WeatherRepositoryImplementation(service: <#ServiceLayer#>)
     }
 
     override func tearDownWithError() throws {
@@ -24,8 +24,8 @@ class WeatherRepositoryImplementation: XCTestCase {
     
     func testWeatherServiceSuccess() throws {
         
-        //var weatherResults: WeatherDataModel?
+        var weatherResults: WeatherDataModel?
         
-       // systemUnderTest?.fetchData(completion: {result in weatherResults = try? result.get()})
+        systemUnderTest?.fetchData(completion: {result in weatherResults = try? result.get()})
     }
 }

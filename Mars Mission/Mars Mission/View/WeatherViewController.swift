@@ -41,14 +41,13 @@ class WeatherViewController: UIViewController, WeatherView {
     }
     
     @objc func showInfoScreen() {
-        let alert = UIAlertController(title: "Information", message: "Weather Station info: \n\(String(describing: viewModel.post?.weatherStation ?? ""))\n\nLast updated on:\n\(String(describing: convertUCTtoDate(date: viewModel.post?.lastUpdated ?? "")))",
-                                      preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Information", message: "Weather Station info: \n\(String(describing: viewModel.post?.weatherStation ?? ""))\n\nLast updated on:\n\(String(describing: convertUCTtoDate(date: viewModel.post?.lastUpdated ?? "")))", preferredStyle: UIAlertController.Style.alert)
         self.present(alert, animated: true, completion: nil)
         alert.addAction(UIAlertAction(title: "Dismis", style: .cancel, handler: nil))
     }
     
     func showServerError() {
-        let alert = UIAlertController(title: "Oops..!", message: "It looks like the server is not reachable, \nplease try again later.",
+        let alert = UIAlertController(title: "Oops..!", message: "It looks like the server is not reachable,\nplease try again later.",
                                       preferredStyle: UIAlertController.Style.alert)
         self.present(alert, animated: true, completion: nil)
         alert.addAction(UIAlertAction(title: "Dismis", style: .cancel, handler: nil))
