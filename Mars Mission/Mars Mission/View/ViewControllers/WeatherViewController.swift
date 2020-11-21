@@ -21,9 +21,11 @@ class WeatherViewController: UIViewController, WeatherView {
         return table
     }()
     
+    let background = hexStringToUIColor(hex: "#3476c5")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = UIColor.systemTeal
+        tableView.backgroundColor = background
         viewModel.configureUI()
         view.addSubview(tableView)
         view.bringSubviewToFront(loader)
@@ -76,7 +78,6 @@ class WeatherViewController: UIViewController, WeatherView {
     
     func showLoadingIndicator() {
         self.loader?.startAnimating()
-        
         self.loader.isHidden = false
     }
     
@@ -114,6 +115,7 @@ extension WeatherViewController: UITableViewDataSource {
             return cell
         }
         cell.textLabel?.text = convertUCTtoDate(date: forecast.date ?? "")
+        
         return cell
     }
 }

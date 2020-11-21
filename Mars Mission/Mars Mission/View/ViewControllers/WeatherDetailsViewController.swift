@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import SpriteKit
 
 class WeatherDetailsViewController: UIViewController {
+    
+    private let skView = SKView()
+    
+    
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
@@ -22,10 +27,37 @@ class WeatherDetailsViewController: UIViewController {
     var windSpeed = Int()
     var status = Bool()
     
+    let background = hexStringToUIColor(hex: "#3476c5")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemTeal
+        //forecatsDataView()
+        //view.backgroundColor = background
+        
+        setupUI()
         forecatsDataView()
+        initSkScene()
+    }
+    
+    private func setupUI() {
+        view.addSubview(skView)
+        forecatsDataView()
+        skView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let top = skView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0)
+        let leading = skView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0)
+        let trailing = skView.trailingAnchor.constraint(equalTo: view.trailingAnchor , constant: 0)
+        let bottom = skView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+        
+        NSLayoutConstraint.activate([top, leading, trailing, bottom])
+    }
+    
+    private func initSkScene() {
+        let particleScene = ParticleScene(size: CGSize(width: 1080, height: 1920))
+        particleScene.scaleMode = .aspectFill
+        particleScene.backgroundColor = background
+        
+        skView.presentScene(particleScene)
     }
     
     func forecatsDataView() {

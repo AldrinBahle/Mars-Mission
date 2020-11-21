@@ -15,7 +15,7 @@ class WeatherRepositoryImplementationTests: XCTestCase {
     var systemUnderTest: WeatherRepositoryImplementation!
     
     override func setUpWithError() throws {
-        systemUnderTest = WeatherRepositoryImplementation(service: <#ServiceLayer#>)
+        systemUnderTest = WeatherRepositoryImplementation(service: mockService)
     }
 
     override func tearDownWithError() throws {
@@ -27,5 +27,17 @@ class WeatherRepositoryImplementationTests: XCTestCase {
         var weatherResults: WeatherDataModel?
         
         systemUnderTest?.fetchData(completion: {result in weatherResults = try? result.get()})
+        
+        XCTAssertNotNil(weatherResults)
+    }
+    
+    func testWeatherServiceFailure() {
+        mockService.shouldReturnError = true
+        
+        var weatherResults: WeatherDataModel?
+        
+        systemUnderTest?.fetchData(completion: {result in weatherResults = try? result.get()})
+        
+        
     }
 }

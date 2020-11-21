@@ -55,7 +55,8 @@ class WeatherViewModel {
         
     private func handleThatFetchPostFailure(_ error: Error) {
             DispatchQueue.main.async {
-                print(error)
+                //debug print
+                debugPrint(error)
                 self.view.hideLoadingIndicator()
                 //present an alert
                 self.view.showServerError()

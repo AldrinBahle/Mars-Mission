@@ -13,7 +13,7 @@ func convertUCTtoDate(date: String) -> String {
     dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00")
     dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     let str = dateFormatter.date(from: date)
-    dateFormatter.dateFormat = "MMM dd,yyyy"
+    dateFormatter.dateFormat = "dd, MMM, yyyy"
     let dateToString = dateFormatter.string(from: str ?? Date())
     
     return dateToString
