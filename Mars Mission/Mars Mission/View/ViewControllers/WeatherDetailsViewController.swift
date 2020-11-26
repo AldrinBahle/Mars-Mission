@@ -31,16 +31,12 @@ class WeatherDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //forecatsDataView()
-        //view.backgroundColor = background
-        
         setupUI()
-        forecatsDataView()
-        initSkScene()
     }
     
     private func setupUI() {
         view.addSubview(skView)
+        self.view.sendSubviewToBack(skView)
         forecatsDataView()
         skView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -50,6 +46,7 @@ class WeatherDetailsViewController: UIViewController {
         let bottom = skView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         
         NSLayoutConstraint.activate([top, leading, trailing, bottom])
+        initSkScene()
     }
     
     private func initSkScene() {

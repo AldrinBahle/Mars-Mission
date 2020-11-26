@@ -9,14 +9,14 @@ import Foundation
 
 class WeatherRepositoryImplementation: WeatherRepository {
     
-    let service: ServiceLayer
+    let repository: ServiceLayer
     
-    init(service: ServiceLayer) {
-        self.service = service
+    init(repository: ServiceLayer) {
+        self.repository = repository
     }
     
     func fetchData(completion: @escaping (Result<WeatherDataModel, Error>) -> Void) {
-        service.fetchData { (result) in
+        repository.fetchData { (result) in
             switch result {
             case .success(let post):
                 completion(.success(post))

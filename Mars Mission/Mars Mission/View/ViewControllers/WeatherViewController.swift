@@ -8,28 +8,38 @@
 import UIKit
 
 class WeatherViewController: UIViewController, WeatherView {
-    
+   
     @IBOutlet weak var weatherView: UIStackView!
     @IBOutlet weak var loader: UIActivityIndicatorView!
     
-    let repository = WeatherRepositoryImplementation(service: ServiceLayerImplementation())
+    let repository = WeatherRepositoryImplementation(repository: ServiceLayerImplementation())
+    let background = hexStringToUIColor(hex: "#3476c5")
+    private var weatherViewModel: WeatherViewModel?
     
-    private lazy var viewModel = WeatherViewModel(view: self, repository: repository)
     private let tableView: UITableView = {
         let table = UITableView()
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return table
     }()
     
-    let background = hexStringToUIColor(hex: "#3476c5")
+    init() {
+        super.init(nibName: "WeatherViewController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let service = ServiceLayerImplementation()
+        let weatherRepository = WeatherRepositoryImplementation(repository: service)
+        self.weatherViewModel = WeatherViewModel(view: self, repository: WeatherRepositoryImplementation(repository: service))
         tableView.backgroundColor = background
-        viewModel.configureUI()
+        weatherViewModel?.configureUI()
         view.addSubview(tableView)
         view.bringSubviewToFront(loader)
-        viewModel.fetchData()
+        weatherViewModel?.fetchData()
         tableView.delegate = self
         tableView.dataSource = self
         showWeatherView()
@@ -43,7 +53,7 @@ class WeatherViewController: UIViewController, WeatherView {
     }
     
     @objc func showInfoScreen() {
-        let alert = UIAlertController(title: "Information", message: "Weather Station info: \n\(String(describing: viewModel.post?.weatherStation ?? ""))\n\nLast updated on:\n\(String(describing: convertUCTtoDate(date: viewModel.post?.lastUpdated ?? "")))", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Information", message: "Weather Station info: \n\(String(describing: weatherViewModel?.post?.weatherStation ?? ""))\n\nLast updated on:\n\(String(describing: convertUCTtoDate(date: weatherViewModel?.post?.lastUpdated ?? "")))", preferredStyle: UIAlertController.Style.alert)
         self.present(alert, animated: true, completion: nil)
         alert.addAction(UIAlertAction(title: "Dismis", style: .cancel, handler: nil))
     }
@@ -90,8 +100,8 @@ class WeatherViewController: UIViewController, WeatherView {
 extension WeatherViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let weatherDetails = viewModel.post?.forecasts[indexPath.row]
-        
+        let weatherDetails = weatherViewModel?.post?.forecasts[indexPath.row]
+
         let vc = WeatherDetailsViewController(nibName: "WeatherDetailsViewController", bundle: nil)
         vc.title = convertUCTtoDate(date: weatherDetails?.date ?? "")
         vc.temp = weatherDetails?.temp ?? 0.0
@@ -104,20 +114,18 @@ extension WeatherViewController: UITableViewDelegate {
 
 extension WeatherViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection secion: Int) -> Int {
-        return viewModel.post?.forecasts.count ?? 0
+        return weatherViewModel?.post?.forecasts.count ?? 0
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.backgroundColor = .clear
         cell.isOpaque = false
-        guard let forecast = viewModel.post?.forecasts[indexPath.row] else {
+        guard let forecast = weatherViewModel?.post?.forecasts[indexPath.row] else {
             return cell
         }
         cell.textLabel?.text = convertUCTtoDate(date: forecast.date ?? "")
-        
+
         return cell
     }
 }
-
-

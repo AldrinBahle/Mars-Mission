@@ -1,0 +1,6 @@
+framework module Pods_Mars_Mission_Mars_MissionUITests {
+  umbrella header "Pods-Mars Mission-Mars MissionUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

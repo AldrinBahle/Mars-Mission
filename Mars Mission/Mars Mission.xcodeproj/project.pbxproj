@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0E5EA90A5547A3FB3412B61 /* Pods_Mars_Mission_Mars_MissionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D69D57F9392985CB93AFFD /* Pods_Mars_Mission_Mars_MissionUITests.framework */; };
+		BB00B220BD4AF3FCC50B3456 /* Pods_Mars_MissionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A24FD7F14700CF0482F6EFC /* Pods_Mars_MissionTests.framework */; };
+		EE245A2AEE2E17F28844478F /* Pods_Mars_Mission.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4894DD379E8CBD61B116C3C5 /* Pods_Mars_Mission.framework */; };
 		F218D80B2555D6FB00410E73 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F218D80A2555D6FB00410E73 /* WeatherView.swift */; };
 		F218D8162557295200410E73 /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F218D8152557295200410E73 /* WeatherViewController.xib */; };
 		F250502D2564D60E00079943 /* dateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F250502C2564D60E00079943 /* dateFormatter.swift */; };
@@ -20,6 +23,7 @@
 		F28D025B2563C56E008D2C31 /* WeatherRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28D025A2563C56D008D2C31 /* WeatherRepositoryImplementation.swift */; };
 		F28D02632563C597008D2C31 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28D02622563C597008D2C31 /* MockService.swift */; };
 		F28D02712564C517008D2C31 /* WeatherDataModel.json in Resources */ = {isa = PBXBuildFile; fileRef = F28D02702564C517008D2C31 /* WeatherDataModel.json */; };
+		F28D7C07256BDCE9003F3E42 /* WeatherDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28D7C06256BDCE9003F3E42 /* WeatherDetailsViewModel.swift */; };
 		F2A18DB325501CE5006E4F91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A18DB225501CE5006E4F91 /* AppDelegate.swift */; };
 		F2A18DB525501CE5006E4F91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A18DB425501CE5006E4F91 /* SceneDelegate.swift */; };
 		F2A18DBC25501CE8006E4F91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A18DBB25501CE8006E4F91 /* Assets.xcassets */; };
@@ -28,7 +32,8 @@
 		F2BA4EDA256915F000613048 /* customColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA4ED9256915F000613048 /* customColor.swift */; };
 		F2BA4EDF256920DB00613048 /* particleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA4EDE256920DB00613048 /* particleScene.swift */; };
 		F2BA4EE52569212800613048 /* snowParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2BA4EE32569212800613048 /* snowParticle.sks */; };
-		F2BA4EE62569212800613048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2BA4EE42569212800613048 /* Assets.xcassets */; };
+		F2BA4EF32569AA1400613048 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA4EF22569AA1400613048 /* MainView.swift */; };
+		F2BA4F15256A8A8F00613048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2BA4F13256A8A8F00613048 /* Assets.xcassets */; };
 		F2D8C075255BE65200B02B27 /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8C073255BE65200B02B27 /* WeatherDetailsViewController.swift */; };
 		F2D8C076255BE65200B02B27 /* WeatherDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D8C074255BE65200B02B27 /* WeatherDetailsViewController.xib */; };
 /* End PBXBuildFile section */
@@ -51,6 +56,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17D69D57F9392985CB93AFFD /* Pods_Mars_Mission_Mars_MissionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mars_Mission_Mars_MissionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C3DBF155E7A63D9683DFDB7 /* Pods-Mars Mission.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars Mission.debug.xcconfig"; path = "Target Support Files/Pods-Mars Mission/Pods-Mars Mission.debug.xcconfig"; sourceTree = "<group>"; };
+		4894DD379E8CBD61B116C3C5 /* Pods_Mars_Mission.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mars_Mission.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CBA87146F84FE2CBD3A6412 /* Pods-Mars Mission-Mars MissionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars Mission-Mars MissionUITests.release.xcconfig"; path = "Target Support Files/Pods-Mars Mission-Mars MissionUITests/Pods-Mars Mission-Mars MissionUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7A24FD7F14700CF0482F6EFC /* Pods_Mars_MissionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mars_MissionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99662F8785AD88BE8B00710E /* Pods-Mars Mission-Mars MissionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars Mission-Mars MissionUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mars Mission-Mars MissionUITests/Pods-Mars Mission-Mars MissionUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5EBED9CE2C88836E6964774 /* Pods-Mars Mission.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars Mission.release.xcconfig"; path = "Target Support Files/Pods-Mars Mission/Pods-Mars Mission.release.xcconfig"; sourceTree = "<group>"; };
+		C5104E445AE84E4E820F0AE0 /* Pods-Mars MissionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars MissionTests.release.xcconfig"; path = "Target Support Files/Pods-Mars MissionTests/Pods-Mars MissionTests.release.xcconfig"; sourceTree = "<group>"; };
+		E80347F05F99FED282B39BD8 /* Pods-Mars MissionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars MissionTests.debug.xcconfig"; path = "Target Support Files/Pods-Mars MissionTests/Pods-Mars MissionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F218D80A2555D6FB00410E73 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		F218D8152557295200410E73 /* WeatherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherViewController.xib; sourceTree = "<group>"; };
 		F250502C2564D60E00079943 /* dateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateFormatter.swift; sourceTree = "<group>"; };
@@ -64,6 +78,7 @@
 		F28D025A2563C56D008D2C31 /* WeatherRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepositoryImplementation.swift; sourceTree = "<group>"; };
 		F28D02622563C597008D2C31 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		F28D02702564C517008D2C31 /* WeatherDataModel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WeatherDataModel.json; sourceTree = "<group>"; };
+		F28D7C06256BDCE9003F3E42 /* WeatherDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewModel.swift; sourceTree = "<group>"; };
 		F2A18DAF25501CE5006E4F91 /* Mars Mission.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mars Mission.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A18DB225501CE5006E4F91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2A18DB425501CE5006E4F91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +93,8 @@
 		F2BA4ED9256915F000613048 /* customColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customColor.swift; sourceTree = "<group>"; };
 		F2BA4EDE256920DB00613048 /* particleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = particleScene.swift; sourceTree = "<group>"; };
 		F2BA4EE32569212800613048 /* snowParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = snowParticle.sks; sourceTree = "<group>"; };
-		F2BA4EE42569212800613048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2BA4EF22569AA1400613048 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		F2BA4F13256A8A8F00613048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2D8C073255BE65200B02B27 /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewController.swift; sourceTree = "<group>"; };
 		F2D8C074255BE65200B02B27 /* WeatherDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherDetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE245A2AEE2E17F28844478F /* Pods_Mars_Mission.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB00B220BD4AF3FCC50B3456 /* Pods_Mars_MissionTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,12 +120,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E5EA90A5547A3FB3412B61 /* Pods_Mars_Mission_Mars_MissionUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B209053C5C48C2A86EA6CB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C3DBF155E7A63D9683DFDB7 /* Pods-Mars Mission.debug.xcconfig */,
+				B5EBED9CE2C88836E6964774 /* Pods-Mars Mission.release.xcconfig */,
+				99662F8785AD88BE8B00710E /* Pods-Mars Mission-Mars MissionUITests.debug.xcconfig */,
+				6CBA87146F84FE2CBD3A6412 /* Pods-Mars Mission-Mars MissionUITests.release.xcconfig */,
+				E80347F05F99FED282B39BD8 /* Pods-Mars MissionTests.debug.xcconfig */,
+				C5104E445AE84E4E820F0AE0 /* Pods-Mars MissionTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D7172BBDA9F793B21F164A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4894DD379E8CBD61B116C3C5 /* Pods_Mars_Mission.framework */,
+				17D69D57F9392985CB93AFFD /* Pods_Mars_Mission_Mars_MissionUITests.framework */,
+				7A24FD7F14700CF0482F6EFC /* Pods_Mars_MissionTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F250502B2564D5C800079943 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +158,7 @@
 				F2BA4ED9256915F000613048 /* customColor.swift */,
 				F2BA4EDE256920DB00613048 /* particleScene.swift */,
 				F2BA4EE32569212800613048 /* snowParticle.sks */,
-				F2BA4EE42569212800613048 /* Assets.xcassets */,
+				F2BA4F13256A8A8F00613048 /* Assets.xcassets */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -134,6 +177,7 @@
 				F2BA4EEB2569398F00613048 /* Nibs */,
 				F2BA4EEA2569395400613048 /* ViewControllers */,
 				F218D80A2555D6FB00410E73 /* WeatherView.swift */,
+				F2BA4EF22569AA1400613048 /* MainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				F284F8CC255234BD00AF07A6 /* WeatherViewModel.swift */,
+				F28D7C06256BDCE9003F3E42 /* WeatherDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -181,6 +226,8 @@
 				F2A18DC825501CE8006E4F91 /* Mars MissionTests */,
 				F2A18DD325501CE8006E4F91 /* Mars MissionUITests */,
 				F2A18DB025501CE5006E4F91 /* Products */,
+				3B209053C5C48C2A86EA6CB7 /* Pods */,
+				D7172BBDA9F793B21F164A17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -255,9 +302,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2A18DD925501CE8006E4F91 /* Build configuration list for PBXNativeTarget "Mars Mission" */;
 			buildPhases = (
+				07D2D8425C8949CBB0DB78E7 /* [CP] Check Pods Manifest.lock */,
 				F2A18DAB25501CE5006E4F91 /* Sources */,
 				F2A18DAC25501CE5006E4F91 /* Frameworks */,
 				F2A18DAD25501CE5006E4F91 /* Resources */,
+				49EC7343365D7864A9550E8C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -272,6 +321,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2A18DDC25501CE8006E4F91 /* Build configuration list for PBXNativeTarget "Mars MissionTests" */;
 			buildPhases = (
+				567967F46CB8DE59F463DC77 /* [CP] Check Pods Manifest.lock */,
 				F2A18DC125501CE8006E4F91 /* Sources */,
 				F2A18DC225501CE8006E4F91 /* Frameworks */,
 				F2A18DC325501CE8006E4F91 /* Resources */,
@@ -290,9 +340,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2A18DDF25501CE8006E4F91 /* Build configuration list for PBXNativeTarget "Mars MissionUITests" */;
 			buildPhases = (
+				774C589E6F541DD6076DB4B5 /* [CP] Check Pods Manifest.lock */,
 				F2A18DCC25501CE8006E4F91 /* Sources */,
 				F2A18DCD25501CE8006E4F91 /* Frameworks */,
 				F2A18DCE25501CE8006E4F91 /* Resources */,
+				1E9CEE8681020D34BB404A4F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -358,7 +410,7 @@
 				F2A18DBC25501CE8006E4F91 /* Assets.xcassets in Resources */,
 				F2BA4EE52569212800613048 /* snowParticle.sks in Resources */,
 				F218D8162557295200410E73 /* WeatherViewController.xib in Resources */,
-				F2BA4EE62569212800613048 /* Assets.xcassets in Resources */,
+				F2BA4F15256A8A8F00613048 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +431,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07D2D8425C8949CBB0DB78E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mars Mission-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E9CEE8681020D34BB404A4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mars Mission-Mars MissionUITests/Pods-Mars Mission-Mars MissionUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mars Mission-Mars MissionUITests/Pods-Mars Mission-Mars MissionUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mars Mission-Mars MissionUITests/Pods-Mars Mission-Mars MissionUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49EC7343365D7864A9550E8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mars Mission/Pods-Mars Mission-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mars Mission/Pods-Mars Mission-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mars Mission/Pods-Mars Mission-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		567967F46CB8DE59F463DC77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mars MissionTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		774C589E6F541DD6076DB4B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mars Mission-Mars MissionUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F2A18DAB25501CE5006E4F91 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -394,9 +549,11 @@
 				F2A18DB525501CE5006E4F91 /* SceneDelegate.swift in Sources */,
 				F284F8E32552E50200AF07A6 /* ServiceLayer.swift in Sources */,
 				F250502D2564D60E00079943 /* dateFormatter.swift in Sources */,
+				F28D7C07256BDCE9003F3E42 /* WeatherDetailsViewModel.swift in Sources */,
 				F284F8EE2552F83100AF07A6 /* WeatherRepository.swift in Sources */,
 				F2BA4EDA256915F000613048 /* customColor.swift in Sources */,
 				F2D8C075255BE65200B02B27 /* WeatherDetailsViewController.swift in Sources */,
+				F2BA4EF32569AA1400613048 /* MainView.swift in Sources */,
 				F284F8BF255229FC00AF07A6 /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +710,7 @@
 		};
 		F2A18DDA25501CE8006E4F91 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C3DBF155E7A63D9683DFDB7 /* Pods-Mars Mission.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -571,6 +729,7 @@
 		};
 		F2A18DDB25501CE8006E4F91 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5EBED9CE2C88836E6964774 /* Pods-Mars Mission.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -589,6 +748,7 @@
 		};
 		F2A18DDD25501CE8006E4F91 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E80347F05F99FED282B39BD8 /* Pods-Mars MissionTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -610,6 +770,7 @@
 		};
 		F2A18DDE25501CE8006E4F91 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5104E445AE84E4E820F0AE0 /* Pods-Mars MissionTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -631,6 +792,7 @@
 		};
 		F2A18DE025501CE8006E4F91 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99662F8785AD88BE8B00710E /* Pods-Mars Mission-Mars MissionUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -650,6 +812,7 @@
 		};
 		F2A18DE125501CE8006E4F91 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CBA87146F84FE2CBD3A6412 /* Pods-Mars Mission-Mars MissionUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -8,10 +8,9 @@
 import Foundation
 
 class WeatherViewModel {
+    
     let title = "Mars Weather"
-    
-    let repository: WeatherRepository
-    
+    let repository: WeatherRepository?
     var view: WeatherView
     var post: WeatherDataModel?
     
@@ -33,7 +32,7 @@ class WeatherViewModel {
             self.view.showLoadingIndicator()
         }
         DispatchQueue.global(qos: .background).async {
-            self.repository.fetchData { (result) in
+            self.repository?.fetchData { (result) in
                 switch result {
                 case .success(let post):
                     self.handleThatFetchPostSucceeds(post)
@@ -55,10 +54,7 @@ class WeatherViewModel {
         
     private func handleThatFetchPostFailure(_ error: Error) {
             DispatchQueue.main.async {
-                //debug print
-                debugPrint(error)
                 self.view.hideLoadingIndicator()
-                //present an alert
                 self.view.showServerError()
             }
         }
