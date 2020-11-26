@@ -12,6 +12,6 @@
 ##### 6. Observe Industry Standard Version control.
 
 #### The project itself is coded in Swift 5.
-#### To get it running on your machine, make you have Xcode 11+ running on your PC.
+#### To get it running on your machine, make sure you have Xcode 11+ running on your PC.
 #### run the following command:
 `git clone https://github.com/AldrinBahle/Mars-Mission.git`
