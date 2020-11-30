@@ -8,28 +8,31 @@
 import Foundation
 
 class WeatherViewModel {
+    
     let title = "Mars Weather"
-    
-    let repository = WeatherRepositoryImplementation()
-    
+    let repository: WeatherRepository?
     var view: WeatherView
     var post: WeatherDataModel?
     
     
-    init(view: WeatherView) {
+    init(view: WeatherView, repository: WeatherRepository) {
         self.view = view
+        self.repository = repository
     }
     
     func configureUI() {
         self.view.configureTitle(title)
+        self.view.addRightNavigationBarInfoButton()
         self.view.hideWeatherView()
         self.view.hideLoadingIndicator()
     }
     
     func fetchData() {
-        self.view.showLoadingIndicator()
+        DispatchQueue.main.async {
+            self.view.showLoadingIndicator()
+        }
         DispatchQueue.global(qos: .background).async {
-            self.repository.fetchData { (result) in
+            self.repository?.fetchData { (result) in
                 switch result {
                 case .success(let post):
                     self.handleThatFetchPostSucceeds(post)
@@ -51,7 +54,8 @@ class WeatherViewModel {
         
     private func handleThatFetchPostFailure(_ error: Error) {
             DispatchQueue.main.async {
-                print(error)
+                self.view.hideLoadingIndicator()
+                self.view.showServerError()
             }
         }
     }
