@@ -10,3 +10,4 @@ import Foundation
 protocol WeatherRepository {
     func fetchData(completion: @escaping (Result<WeatherDataModel, Error>) -> Void)
 }
+

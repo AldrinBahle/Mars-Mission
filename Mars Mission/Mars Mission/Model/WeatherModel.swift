@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct WeatherDataModel: Codable, Hashable {
-    var forecasts: [Forecasts]!
+struct WeatherDataModel: Codable {
+    var forecasts: [Forecasts]?
     var lastUpdated: String?
     var weatherStation: String?
 }
 
-struct Forecasts: Codable, Hashable {
+struct Forecasts: Codable {
     var date: String?
     var temp: Double?
     var humidity: Int?

@@ -8,7 +8,6 @@
 import Foundation
 
 class WeatherRepositoryImplementation: WeatherRepository {
-    
     let repository: ServiceLayer
     
     init(repository: ServiceLayer) {

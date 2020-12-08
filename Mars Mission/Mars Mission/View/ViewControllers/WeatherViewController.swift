@@ -8,19 +8,13 @@
 import UIKit
 
 class WeatherViewController: UIViewController, WeatherView {
-   
+    
     @IBOutlet weak var weatherView: UIStackView!
     @IBOutlet weak var loader: UIActivityIndicatorView!
+    @IBOutlet weak var background: UIImageView!
     
-    let repository = WeatherRepositoryImplementation(repository: ServiceLayerImplementation())
-    let background = hexStringToUIColor(hex: "#3476c5")
     private var weatherViewModel: WeatherViewModel?
-    
-    private let tableView: UITableView = {
-        let table = UITableView()
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        return table
-    }()
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
     init() {
         super.init(nibName: "WeatherViewController", bundle: nil)
@@ -33,15 +27,17 @@ class WeatherViewController: UIViewController, WeatherView {
     override func viewDidLoad() {
         super.viewDidLoad()
         let service = ServiceLayerImplementation()
-        let weatherRepository = WeatherRepositoryImplementation(repository: service)
+        //let weatherRepository = WeatherRepositoryImplementation(repository: service)
         self.weatherViewModel = WeatherViewModel(view: self, repository: WeatherRepositoryImplementation(repository: service))
-        tableView.backgroundColor = background
+        collectionView.backgroundColor = UIColor(displayP3Red: 88/255, green: 75/255, blue: 105/255, alpha: 0)
+        view.bringSubviewToFront(background)
         weatherViewModel?.configureUI()
-        view.addSubview(tableView)
+        collectionView.register(MainView.self, forCellWithReuseIdentifier: MainView.identifier)
+        view.addSubview(collectionView)
         view.bringSubviewToFront(loader)
         weatherViewModel?.fetchData()
-        tableView.delegate = self
-        tableView.dataSource = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
         showWeatherView()
         hideWeatherView()
     }
@@ -59,19 +55,23 @@ class WeatherViewController: UIViewController, WeatherView {
     }
     
     func showServerError() {
-        let alert = UIAlertController(title: "Oops..!", message: "It looks like the server is not reachable,\nplease try again later.",
-                                      preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Oops..!", message: "It looks like the server is not reachable,\nplease try again later.", preferredStyle: UIAlertController.Style.alert)
         self.present(alert, animated: true, completion: nil)
-        alert.addAction(UIAlertAction(title: "Dismis", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Dismis", style: .cancel, handler: {_ in
+            self.hideLoadingIndicator()
+        }))
+        alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: {_ in
+            self.weatherViewModel?.fetchData()
+        }))
     }
     
     func reloadTableView() {
-        self.tableView.reloadData()
+        self.collectionView.reloadData()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        tableView.frame = view.bounds
+        collectionView.frame = view.bounds
     }
     
     func configureTitle(_ title: String) {
@@ -97,11 +97,24 @@ class WeatherViewController: UIViewController, WeatherView {
     }
 }
 
-extension WeatherViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        let weatherDetails = weatherViewModel?.post?.forecasts[indexPath.row]
-
+extension WeatherViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return weatherViewModel?.post?.forecasts?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainView.identifier, for: indexPath) as! MainView
+        guard let weatherData = weatherViewModel?.post?.forecasts?[indexPath.row] else {
+            return cell
+        }
+        cell.dateLabel.text = convertUCTtoDate(date: weatherData.date ?? "")
+        cell.dateLabel.font = .italicSystemFont(ofSize: 20)
+        cell.dateLabel.textColor = .white
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let weatherDetails = weatherViewModel?.post?.forecasts?[indexPath.row]
         let vc = WeatherDetailsViewController(nibName: "WeatherDetailsViewController", bundle: nil)
         vc.title = convertUCTtoDate(date: weatherDetails?.date ?? "")
         vc.temp = weatherDetails?.temp ?? 0.0
@@ -110,22 +123,13 @@ extension WeatherViewController: UITableViewDelegate {
         vc.status = weatherDetails?.safe ?? false
         self.navigationController?.pushViewController(vc, animated: true)
     }
-}
-
-extension WeatherViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection secion: Int) -> Int {
-        return weatherViewModel?.post?.forecasts.count ?? 0
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.size.width - 100, height: 50)
     }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .clear
-        cell.isOpaque = false
-        guard let forecast = weatherViewModel?.post?.forecasts[indexPath.row] else {
-            return cell
-        }
-        cell.textLabel?.text = convertUCTtoDate(date: forecast.date ?? "")
-
-        return cell
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
     }
 }
+
