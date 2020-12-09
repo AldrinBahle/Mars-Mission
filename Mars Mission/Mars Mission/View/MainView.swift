@@ -9,35 +9,30 @@ import Foundation
 import UIKit
 
 class MainView: UICollectionViewCell {
-    
+    static let identifier = "Days"
     weak var dateLabel: UILabel!
+    let background = hexStringToUIColor(hex: "#0058a9")
     
-    lazy var collectionView: UICollectionView = {
-        let configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
-        let layout = UICollectionViewCompositionalLayout.list(using: configuration)
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .blue
-        
-        return collectionView
-    }()
-    
-    init() {
-        super.init(frame: .zero)
-        setupSubviews()
-    }
-    
-    func setupSubviews() {
-        addSubview(collectionView)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        contentView.backgroundColor = background
+        contentView.layer.cornerRadius = 12
+        let labelConstraint = UILabel()
+        labelConstraint.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(labelConstraint)
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: topAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            labelConstraint.topAnchor.constraint(equalTo: contentView.topAnchor),
+            labelConstraint.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            labelConstraint.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            labelConstraint.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
         ])
+        dateLabel = labelConstraint
+        dateLabel.textAlignment = .center
+        dateLabel.font = .systemFont(ofSize: 20)
+        dateLabel.textColor = .black
     }
     
     required init?(coder: NSCoder) {
-        fatalError()
+        fatalError("init(coder:) has not been implemented")
     }
 }

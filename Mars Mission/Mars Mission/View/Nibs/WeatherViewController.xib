@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeatherViewController" customModule="Mars_Mission" customModuleProvider="target">
             <connections>
+                <outlet property="background" destination="68o-1Q-js4" id="Jip-c1-yXH"/>
                 <outlet property="loader" destination="fky-xW-aSQ" id="vis-qQ-7r6"/>
                 <outlet property="view" destination="iN0-l3-epB" id="2bb-3s-H78"/>
             </connections>
@@ -19,28 +20,36 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="68o-1Q-js4">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="titleLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="057-sL-Fny">
                     <rect key="frame" x="148" y="83" width="119" height="36"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="fky-xW-aSQ">
                     <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemTealColor"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="68o-1Q-js4" secondAttribute="bottom" id="MMC-EE-qAm"/>
+                <constraint firstItem="68o-1Q-js4" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ZZN-9N-P5x"/>
                 <constraint firstItem="fky-xW-aSQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fpp-aY-xzd"/>
+                <constraint firstItem="68o-1Q-js4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fzq-aL-aUL"/>
+                <constraint firstItem="68o-1Q-js4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gF7-PF-RzU"/>
                 <constraint firstItem="fky-xW-aSQ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="oGd-Co-j5c"/>
             </constraints>
             <point key="canvasLocation" x="-465.21739130434787" y="44.866071428571423"/>
         </view>
     </objects>
     <resources>
+        <image name="background" width="1280" height="1280"/>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
