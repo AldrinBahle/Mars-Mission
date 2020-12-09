@@ -7,14 +7,11 @@
 //
 
 import UIKit
-import SpriteKit
 
 class WeatherDetailsViewController: UIViewController {
     
-    private let skView = SKView()
-    
-    
-    
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
@@ -31,48 +28,25 @@ class WeatherDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-    }
-    
-    private func setupUI() {
-        view.addSubview(skView)
-        self.view.sendSubviewToBack(skView)
         forecatsDataView()
-        skView.translatesAutoresizingMaskIntoConstraints = false
-        
-        let top = skView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0)
-        let leading = skView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0)
-        let trailing = skView.trailingAnchor.constraint(equalTo: view.trailingAnchor , constant: 0)
-        let bottom = skView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
-        
-        NSLayoutConstraint.activate([top, leading, trailing, bottom])
-        initSkScene()
-    }
-    
-    private func initSkScene() {
-        let particleScene = ParticleScene(size: CGSize(width: 1080, height: 1920))
-        particleScene.scaleMode = .aspectFill
-        particleScene.backgroundColor = background
-        
-        skView.presentScene(particleScene)
+        stackView.layer.cornerRadius = 12
     }
     
     func forecatsDataView() {
         self.dateLabel?.text = "Date: \(date)"
-        self.tempLabel.font = UIFont.systemFont(ofSize: tempLabel.font.pointSize, weight: UIFont.Weight.semibold)
         self.tempLabel.text = "Temperature: \(temp) °C"
-        self.humidityLabel.font = UIFont.systemFont(ofSize: tempLabel.font.pointSize, weight: UIFont.Weight.semibold)
-        self.humidityLabel.text = "Humidity: \(humidity) g/m3"
-        self.windSpeedLabel.font = UIFont.systemFont(ofSize: tempLabel.font.pointSize, weight: UIFont.Weight.semibold)
+        tempLabel.font = .italicSystemFont(ofSize: 25)
         self.windSpeedLabel.text = "Windspeed: \(windSpeed) km/h"
-        self.statusLabel.font = UIFont.systemFont(ofSize: tempLabel.font.pointSize, weight: UIFont.Weight.semibold)
+        windSpeedLabel.font = .italicSystemFont(ofSize: 25)
+        self.humidityLabel.text = "Humidity: \(humidity) g/m3"
+        humidityLabel.font = .italicSystemFont(ofSize: 25)
+        statusLabel.font = .italicSystemFont(ofSize: 25)
         if status == true {
             self.statusLabel.text = "Status: safe"
         } else {
             self.statusLabel.text = "Status: unsafe"
         }
     }
-    
 }
 
 

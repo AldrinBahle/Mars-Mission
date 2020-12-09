@@ -16,6 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             let vc = WeatherViewController()
             let nav = UINavigationController(rootViewController: vc)
+            nav.navigationBar.setBackgroundImage(UIImage(), for: .default)
+            nav.navigationBar.tintColor =  UIColor.white
+            nav.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
             window.rootViewController = nav
             self.window = window
             window.makeKeyAndVisible()

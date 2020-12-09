@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,17 +23,13 @@
 		F28D025B2563C56E008D2C31 /* WeatherRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28D025A2563C56D008D2C31 /* WeatherRepositoryImplementation.swift */; };
 		F28D02632563C597008D2C31 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28D02622563C597008D2C31 /* MockService.swift */; };
 		F28D02712564C517008D2C31 /* WeatherDataModel.json in Resources */ = {isa = PBXBuildFile; fileRef = F28D02702564C517008D2C31 /* WeatherDataModel.json */; };
-		F28D7C07256BDCE9003F3E42 /* WeatherDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28D7C06256BDCE9003F3E42 /* WeatherDetailsViewModel.swift */; };
 		F2A18DB325501CE5006E4F91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A18DB225501CE5006E4F91 /* AppDelegate.swift */; };
 		F2A18DB525501CE5006E4F91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A18DB425501CE5006E4F91 /* SceneDelegate.swift */; };
 		F2A18DBC25501CE8006E4F91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A18DBB25501CE8006E4F91 /* Assets.xcassets */; };
 		F2A18DCA25501CE8006E4F91 /* Mars_MissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A18DC925501CE8006E4F91 /* Mars_MissionTests.swift */; };
 		F2A18DD525501CE8006E4F91 /* Mars_MissionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A18DD425501CE8006E4F91 /* Mars_MissionUITests.swift */; };
 		F2BA4EDA256915F000613048 /* customColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA4ED9256915F000613048 /* customColor.swift */; };
-		F2BA4EDF256920DB00613048 /* particleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA4EDE256920DB00613048 /* particleScene.swift */; };
-		F2BA4EE52569212800613048 /* snowParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2BA4EE32569212800613048 /* snowParticle.sks */; };
 		F2BA4EF32569AA1400613048 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA4EF22569AA1400613048 /* MainView.swift */; };
-		F2BA4F15256A8A8F00613048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2BA4F13256A8A8F00613048 /* Assets.xcassets */; };
 		F2D8C075255BE65200B02B27 /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D8C073255BE65200B02B27 /* WeatherDetailsViewController.swift */; };
 		F2D8C076255BE65200B02B27 /* WeatherDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D8C074255BE65200B02B27 /* WeatherDetailsViewController.xib */; };
 /* End PBXBuildFile section */
@@ -78,7 +74,6 @@
 		F28D025A2563C56D008D2C31 /* WeatherRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepositoryImplementation.swift; sourceTree = "<group>"; };
 		F28D02622563C597008D2C31 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		F28D02702564C517008D2C31 /* WeatherDataModel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WeatherDataModel.json; sourceTree = "<group>"; };
-		F28D7C06256BDCE9003F3E42 /* WeatherDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewModel.swift; sourceTree = "<group>"; };
 		F2A18DAF25501CE5006E4F91 /* Mars Mission.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mars Mission.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A18DB225501CE5006E4F91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2A18DB425501CE5006E4F91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,10 +86,7 @@
 		F2A18DD425501CE8006E4F91 /* Mars_MissionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mars_MissionUITests.swift; sourceTree = "<group>"; };
 		F2A18DD625501CE8006E4F91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2BA4ED9256915F000613048 /* customColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customColor.swift; sourceTree = "<group>"; };
-		F2BA4EDE256920DB00613048 /* particleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = particleScene.swift; sourceTree = "<group>"; };
-		F2BA4EE32569212800613048 /* snowParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = snowParticle.sks; sourceTree = "<group>"; };
 		F2BA4EF22569AA1400613048 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		F2BA4F13256A8A8F00613048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2D8C073255BE65200B02B27 /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewController.swift; sourceTree = "<group>"; };
 		F2D8C074255BE65200B02B27 /* WeatherDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherDetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,7 +129,6 @@
 				E80347F05F99FED282B39BD8 /* Pods-Mars MissionTests.debug.xcconfig */,
 				C5104E445AE84E4E820F0AE0 /* Pods-Mars MissionTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -156,9 +147,6 @@
 			children = (
 				F250502C2564D60E00079943 /* dateFormatter.swift */,
 				F2BA4ED9256915F000613048 /* customColor.swift */,
-				F2BA4EDE256920DB00613048 /* particleScene.swift */,
-				F2BA4EE32569212800613048 /* snowParticle.sks */,
-				F2BA4F13256A8A8F00613048 /* Assets.xcassets */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -186,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				F284F8CC255234BD00AF07A6 /* WeatherViewModel.swift */,
-				F28D7C06256BDCE9003F3E42 /* WeatherDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -408,9 +395,7 @@
 			files = (
 				F2D8C076255BE65200B02B27 /* WeatherDetailsViewController.xib in Resources */,
 				F2A18DBC25501CE8006E4F91 /* Assets.xcassets in Resources */,
-				F2BA4EE52569212800613048 /* snowParticle.sks in Resources */,
 				F218D8162557295200410E73 /* WeatherViewController.xib in Resources */,
-				F2BA4F15256A8A8F00613048 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,13 +528,11 @@
 				F284F8CD255234BD00AF07A6 /* WeatherViewModel.swift in Sources */,
 				F2A18DB325501CE5006E4F91 /* AppDelegate.swift in Sources */,
 				F2690EB825558D48004AFECD /* WeatherViewController.swift in Sources */,
-				F2BA4EDF256920DB00613048 /* particleScene.swift in Sources */,
 				F218D80B2555D6FB00410E73 /* WeatherView.swift in Sources */,
 				F284F8F32552F84A00AF07A6 /* WeatherRepositoryImplementation.swift in Sources */,
 				F2A18DB525501CE5006E4F91 /* SceneDelegate.swift in Sources */,
 				F284F8E32552E50200AF07A6 /* ServiceLayer.swift in Sources */,
 				F250502D2564D60E00079943 /* dateFormatter.swift in Sources */,
-				F28D7C07256BDCE9003F3E42 /* WeatherDetailsViewModel.swift in Sources */,
 				F284F8EE2552F83100AF07A6 /* WeatherRepository.swift in Sources */,
 				F2BA4EDA256915F000613048 /* customColor.swift in Sources */,
 				F2D8C075255BE65200B02B27 /* WeatherDetailsViewController.swift in Sources */,

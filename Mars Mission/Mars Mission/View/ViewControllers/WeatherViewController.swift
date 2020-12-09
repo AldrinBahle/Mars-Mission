@@ -27,17 +27,16 @@ class WeatherViewController: UIViewController, WeatherView {
     override func viewDidLoad() {
         super.viewDidLoad()
         let service = ServiceLayerImplementation()
-        //let weatherRepository = WeatherRepositoryImplementation(repository: service)
         self.weatherViewModel = WeatherViewModel(view: self, repository: WeatherRepositoryImplementation(repository: service))
         collectionView.backgroundColor = UIColor(displayP3Red: 88/255, green: 75/255, blue: 105/255, alpha: 0)
         view.bringSubviewToFront(background)
         weatherViewModel?.configureUI()
         collectionView.register(MainView.self, forCellWithReuseIdentifier: MainView.identifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
         view.addSubview(collectionView)
         view.bringSubviewToFront(loader)
         weatherViewModel?.fetchData()
-        collectionView.delegate = self
-        collectionView.dataSource = self
         showWeatherView()
         hideWeatherView()
     }
@@ -55,7 +54,8 @@ class WeatherViewController: UIViewController, WeatherView {
     }
     
     func showServerError() {
-        let alert = UIAlertController(title: "Oops..!", message: "It looks like the server is not reachable,\nplease try again later.", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Oops..!", message: "It looks like the server is not reachable," +
+                                        "\nplease try again later.", preferredStyle: UIAlertController.Style.alert)
         self.present(alert, animated: true, completion: nil)
         alert.addAction(UIAlertAction(title: "Dismis", style: .cancel, handler: {_ in
             self.hideLoadingIndicator()
@@ -107,6 +107,7 @@ extension WeatherViewController: UICollectionViewDelegate, UICollectionViewDataS
         guard let weatherData = weatherViewModel?.post?.forecasts?[indexPath.row] else {
             return cell
         }
+
         cell.dateLabel.text = convertUCTtoDate(date: weatherData.date ?? "")
         cell.dateLabel.font = .italicSystemFont(ofSize: 20)
         cell.dateLabel.textColor = .white
@@ -132,4 +133,6 @@ extension WeatherViewController: UICollectionViewDelegate, UICollectionViewDataS
         return UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
     }
 }
+
+
 
